@@ -13,10 +13,10 @@ const App = () => {
       <Header></Header>
       <ChatContextProvider>
         <AuthContextProvider>
-          <div className="chat">
+          <main className="chat">
             <Messages />
             <MessageForm />
-          </div>
+          </main>
         </AuthContextProvider>
       </ChatContextProvider>
     </div>
