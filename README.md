@@ -47,6 +47,7 @@ React: ./client/App.js
 The backend is using Express server (server.js) which has a very basic setup with two routes: app.get, app.post.
 
 app.get('/api/get/chat') for fetching data.json.
+
 app.post('/api/post/chat') for posting new messages (doesn't persist) returns success status(200).
 
 For the client/frontend, I decided to use React, which is inside the '/client' folder.
