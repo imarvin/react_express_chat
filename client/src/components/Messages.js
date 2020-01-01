@@ -4,11 +4,12 @@ import { ChatContext } from '../contexts/ChatContext';
 
 const Messages = () => {
     const { users, messages } = useContext(ChatContext);
+
     // scroll chat container to bottom to see the latest chat entry
     const messagesEndRef = useRef(null);
     const scrollToBottom = () => {
         messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
-    }
+    };
     useEffect(scrollToBottom, [messages]);
 
     return (

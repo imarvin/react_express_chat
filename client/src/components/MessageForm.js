@@ -7,11 +7,12 @@ import { AuthContext } from '../contexts/AuthContext';
 const MessageForm = () => {
     const { postMessage } = useContext(ChatContext);
     const { authId } = useContext(AuthContext);
-    const [message, setMessage] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ charsLeft, setCharsLeft ] = useState(maxLength);
 
+    // maximum number of characters for new chat entry
     const maxLength = 140;
-    const [charsLeft, setCharsLeft] = useState(maxLength);
-
+    
     const onChangeHandler = (e) => {
         e.preventDefault()
         const { value } = e.target;
@@ -21,13 +22,13 @@ const MessageForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Message must have characters; whitespace is not allowed
+        // Message must include alphanumeric characters.
         if (message.trim().length > 0) {
             const msg = {
-                "id": uuid(),
-                "user": authId,
-                "message": message,
-                "ts": Date.now(),
+                id: uuid(),
+                user: authId,
+                message: message,
+                ts: Date.now(),
             };
             postMessage(msg);
         } else {
