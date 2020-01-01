@@ -8,11 +8,11 @@ const MessageForm = () => {
     const { postMessage } = useContext(ChatContext);
     const { authId } = useContext(AuthContext);
     const [ message, setMessage ] = useState('');
-    const [ charsLeft, setCharsLeft ] = useState(maxLength);
-
+    
     // maximum number of characters for new chat entry
     const maxLength = 140;
-    
+    const [ charsLeft, setCharsLeft ] = useState(maxLength);
+
     const onChangeHandler = (e) => {
         e.preventDefault()
         const { value } = e.target;
