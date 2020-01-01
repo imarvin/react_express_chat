@@ -5,6 +5,8 @@
 ## Quick Start
 
 ```
+Make sure you have Node.js installed (https://nodejs.org).
+
 Open terminal and run the following commands inside the app folder(/better_chat)
 
 1. npm install 
@@ -38,17 +40,15 @@ npm run client
 
 This is a simple chat app that fetches data from a json file.  New chat messages does not persist.
 
-Express Server: ./server.js
-
-React: ./client/App.js
+Express Server - ./server.js<br/>
+React - ./client/App.js<br/>
 
 ## Notes and comments
 
 The backend is using Express server (server.js) which has a very basic setup with two routes: app.get, app.post.
 
-app.get('/api/get/chat') for fetching data.json.
-
-app.post('/api/post/chat') for posting new messages (doesn't persist) returns success status(200).
+app.get('/api/get/chat') - for fetching data.json<br/>
+app.post('/api/post/chat') - for posting new messages (doesn't persist) returns success status(200)<br/>
 
 For the client/frontend, I decided to use React, which is inside the '/client' folder.
 
