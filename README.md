@@ -1,6 +1,6 @@
 # React Express Chat App
 
-> Full stack app with React and Express. Run client and server concurrently. 
+> Full stack app with React and Express. Run client and server concurrently. Preview: https://imarvin.github.io/react_express_chat/
 
 ## Quick Start
 
@@ -42,6 +42,8 @@ This is a simple chat app that fetches data from a json file.  New chat messages
 
 Express Server - ./server.js<br/>
 React - ./client/App.js<br/>
+
+
 
 ## Notes and comments
 
