@@ -1,16 +1,11 @@
 {
   "short_name": "React Chat",
-  "name": "A React Chat",
+  "name": "A React Chat by imarvin",
   "icons": [
     {
-      "src": "better-favicon-fill.png",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "better-apple-touch-icon-fill.png",
-      "type": "image/png",
-      "sizes": "180x180"
+      "type": "image/x-icon"
     }
   ],
   "start_url": ".",
