@@ -17,7 +17,7 @@ const Message = (props) => {
             {message &&
                 <li className="chat__message" onClick={() => setShowCard(!showCard)} data-id={message.id} data-is-auth={isAuth} data-flip={showCard} >
                     <div className="chat__message-avatar">
-                        <img className="chat__message-avatar-img" src={`/images/${avatar}`} alt={user.real_name} />
+                        <img className="chat__message-avatar-img" src={`./images/${avatar}`} alt={user.real_name} />
                     </div>
                     <div className="chat__message-wrapper">
                         <Moment className="chat__message-timestamp" fromNow date={message.ts} interval={30000}></Moment>
