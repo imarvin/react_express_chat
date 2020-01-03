@@ -1,19 +1,20 @@
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+    font-family: 'Roboto';
+    src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
 }
+
 @font-face {
     font-family: 'Special Elite';
     src: local('SpecialElite'), url(./fonts/SpecialElite-Regular.ttf) format('truetype');
 }
 
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Screen size variables
@@ -24,30 +25,30 @@ $screen-xl-min: 1220px; // extra large desktops
 
 // Mixins
 @mixin sm {
-  @media (min-width: #{$screen-sm-min}) {
-      @content;
-  }
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
 }
 
 // Small devices
 @mixin md {
-  @media (min-width: #{$screen-md-min}) {
-      @content;
-  }
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
 }
 
 // Medium devices
 @mixin lg {
-  @media (min-width: #{$screen-lg-min}) {
-      @content;
-  }
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
 }
 
 // extra Large devices
 @mixin xl {
-  @media (min-width: #{$screen-lg-min}) {
-      @content;
-  }
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
 }
 
 
@@ -55,316 +56,328 @@ $screen-xl-min: 1220px; // extra large desktops
 
 
 .chat {
-  color: #291842;
-  margin-top: 4rem;
-  
-  @include xl {
-      width: $screen-lg-min;
-      margin-right: auto;
-      margin-left: auto;
-  }
+    color: #291842;
+    margin-top: 4rem;
 
-  &__header {
-      border-bottom: 1px solid #f5f5f7;;
-      box-shadow: 1px 1px #f5f5f7;
-      margin: 0;
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      background: #fff;
-      width: 100%;
-      height: 1.5rem;
-      z-index: 10;
-  }
-  
-  &__logo {
-      margin: 0;
-      padding: 0;
-
-      &::after {
-        content: '[...imarvin]';
-        display: inline-block;
-        font-family: 'Special Elite';
-        height: 1.15rem;
-        line-height: 1.5rem;
-        vertical-align: middle;
+    @include xl {
+        width: $screen-lg-min;
+        margin-right: auto;
+        margin-left: auto;
     }
 
-      &-svg {
-        font-size: 3rem;
-        color: indianred;
+    &__header {
+        border-bottom: 1px solid #f5f5f7;
+        ;
+        box-shadow: 1px 1px #f5f5f7;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        width: 100%;
+        height: 3rem;
+        z-index: 10;
+
+        &-status {
+            display: inline-block;
+            position: absolute;
+            color: indianred;
+            margin: 1rem;
+            right: 0;
+        }
+    }
+
+    &__logo {
         display: inline-block;
-        vertical-align: middle;
-      }
-  }
-  &__logo-img {
-      height: 1.5rem;
-      margin: 0;
-      padding: 0;
-      vertical-align: text-bottom;
+        margin: 1rem;
+        padding: 0;
 
-      @include md {
-          height: 2rem;
-      }
-  }
-  &__logo-h1 {
-      display: inline-block;
-      font-size: .75rem;
-      line-height: 1.5rem;
-      margin: 0 .5rem;
+        &::after {
+            content: '[...imarvin]';
+            display: inline-block;
+            font-family: 'Special Elite';
+            height: 1.15rem;
+            line-height: 1.5rem;
+            vertical-align: middle;
+        }
 
-      @include md {
-          font-size: 1rem;
-      }
-  }
+        &-svg {
+            font-size: 3rem;
+            color: indianred;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
 
-  &__messages {
-      list-style: none;
-      margin-bottom: 6rem;
-      padding: 0;
+    &__logo-img {
+        height: 1.5rem;
+        margin: 0;
+        padding: 0;
+        vertical-align: text-bottom;
 
-      @include md {
-          padding: 1rem;
-      }
+        @include md {
+            height: 2rem;
+        }
+    }
 
-      @include lg {
-          padding: 4rem;
-      }
+    &__logo-h1 {
+        display: inline-block;
+        font-size: .75rem;
+        line-height: 1.5rem;
+        margin: 0 .5rem;
 
-  }
+        @include md {
+            font-size: 1rem;
+        }
+    }
 
-  &__message {
-      padding: 1rem;
-      //margin-right: 5rem;
-      display: grid;
-      grid-template-columns: 3rem auto;
+    &__messages {
+        list-style: none;
+        margin-bottom: 6rem;
+        padding: 0;
 
-      @include md {
-          margin-right: 5rem;
-          grid-template-columns: 4rem auto;
-      }
+        @include md {
+            padding: 1rem;
+        }
 
-      &-wrapper {
-          display: block;
-          position: relative;
-          width: 90%;
-      }
+        @include lg {
+            padding: 4rem;
+        }
 
-      &-avatar {
-          height: 35px;
-          width: 35px;
+    }
 
-          @include md {
-              height: 50px;
-              width: 50px;
-          }
+    &__message {
+        padding: 1rem;
+        //margin-right: 5rem;
+        display: grid;
+        grid-template-columns: 3rem auto;
 
-          &-img {
-              max-height: 100%;
-              max-width: 100%;
-              border-radius: 50%;
-          }
-      }
+        @include md {
+            margin-right: 5rem;
+            grid-template-columns: 4rem auto;
+        }
 
-      &-user {
-          display: inline-block;
-      }
+        &-wrapper {
+            display: block;
+            position: relative;
+            width: 90%;
+        }
 
-      &-username {
-          display: none;
+        &-avatar {
+            height: 35px;
+            width: 35px;
 
-          &::before {
-              content: '-';
-              margin: 0 5px;
-          }
+            @include md {
+                height: 50px;
+                width: 50px;
+            }
 
-          @include md {
-              display: inline-block;
-          }
-      }
+            &-img {
+                max-height: 100%;
+                max-width: 100%;
+                border-radius: 50%;
+            }
+        }
 
-      &-content {
-          padding: 1rem;
-          background: #f4f4f4;
-          border-radius: .5rem;
-          word-break: break-word;
-      }
+        &-user {
+            display: inline-block;
+        }
 
-      &-timestamp {
-          position: absolute;
-          right: 0;
-      }
+        &-username {
+            display: none;
 
-      &-timestamp,
-      &-user {
-          font-size: .75rem;
-          line-height: 1.5rem;
-      }
+            &::before {
+                content: '-';
+                margin: 0 5px;
+            }
 
-      &[data-is-auth=true] {
-          grid-template-columns: auto 3rem;
-          justify-items: end;
+            @include md {
+                display: inline-block;
+            }
+        }
 
-          @include md {
-              margin-left: 4rem;
-              margin-right: 0;
-              grid-template-columns: auto 4rem;
-          }
+        &-content {
+            padding: 1rem;
+            background: #f4f4f4;
+            border-radius: .5rem;
+            word-break: break-word;
+        }
 
-          .chat__message {
+        &-timestamp {
+            position: absolute;
+            right: 0;
+        }
 
-              &-timestamp {
-                  position: relative;
-              }
+        &-timestamp,
+        &-user {
+            font-size: .75rem;
+            line-height: 1.5rem;
+        }
 
-              &-user {
-                  display: none;
-              }
+        &[data-is-auth=true] {
+            grid-template-columns: auto 3rem;
+            justify-items: end;
 
-              &-content {
-                  background: #15d1a5;
-                  color: #fff;
-              }
+            @include md {
+                margin-left: 4rem;
+                margin-right: 0;
+                grid-template-columns: auto 4rem;
+            }
 
-              &-avatar {
-                  background: #2a1843;
-                  border-radius: 50%;
-                  text-align: center;
-                  line-height: 2.7rem;
-                  grid-column: 2;
-                  grid-row: 1;
+            .chat__message {
 
-                  @include md {
-                      line-height: 4rem;
-                  }
+                &-timestamp {
+                    position: relative;
+                }
 
-                  &-img {
-                      background: #2a1843;
-                      border-radius: initial;
-                      max-height: 60%;
-                  }
-              }
-          }
-      }
+                &-user {
+                    display: none;
+                }
 
-      &-card {
-          display: none;
-      }
+                &-content {
+                    background: #15d1a5;
+                    color: #fff;
+                }
 
-      &[data-card-flip=true] {
-          .chat__message-card {
-              display: block;
-          }
-      }
+                &-avatar {
+                    background: #2a1843;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 2.7rem;
+                    grid-column: 2;
+                    grid-row: 1;
 
-  }
+                    @include md {
+                        line-height: 4rem;
+                    }
 
-  &__form {
-      background: #fff;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      height: 4rem;
-      width: 100%;
+                    &-img {
+                        background: #2a1843;
+                        border-radius: initial;
+                        max-height: 60%;
+                    }
+                }
+            }
+        }
 
-      &-form {
-          height: 100%;
-          border: 0;
-          border-top: 1px solid #15d1a5;
-          display: grid;
-          grid-gap: .5rem;
-          grid-template-columns: 2rem auto 2.5rem;
-      }
+        &-card {
+            display: none;
+        }
 
-      &-chars {
-          padding: 1.5rem 0 0 .5rem;
-          font-size: .75rem;
-          color: gray;
-      }
+        &[data-card-flip=true] {
+            .chat__message-card {
+                display: block;
+            }
+        }
 
-      &-input {
-          width: 100%;
-          border: 0;
-          padding: .75rem 0;
-          font-size: 1em;
-          outline: none;
-      }
+    }
 
-      &-button {
-          background: none;
-          border: 0;
-          color: gray;
-          cursor: pointer;
-          padding: 0;
-          margin: 0;
-      }
-  }
+    &__form {
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 4rem;
+        width: 100%;
+
+        &-form {
+            height: 100%;
+            border: 0;
+            border-top: 1px solid #15d1a5;
+            display: grid;
+            grid-gap: .5rem;
+            grid-template-columns: 2rem auto 2.5rem;
+        }
+
+        &-chars {
+            padding: 1.5rem 0 0 .5rem;
+            font-size: .75rem;
+            color: gray;
+        }
+
+        &-input {
+            width: 100%;
+            border: 0;
+            padding: .75rem 0;
+            font-size: 1em;
+            outline: none;
+        }
+
+        &-button {
+            background: none;
+            border: 0;
+            color: gray;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
 
 // card flip
 .chat__card {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 
-  &-container {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 1em;
-      perspective: 1000px;
-  }
+    &-container {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1em;
+        perspective: 1000px;
+    }
 
-  &-front,
-  &-back {
-      width: 100%;
-      height: 100%;
-  }
+    &-front,
+    &-back {
+        width: 100%;
+        height: 100%;
+    }
 
-  &-flipper {
-      position: relative;
-      transform-style: preserve-3d;
-      transition: .6s;
+    &-flipper {
+        position: relative;
+        transform-style: preserve-3d;
+        transition: .6s;
 
-      &[data-flip=true] {
-          transform: rotateX(180deg);
-      }
-  }
+        &[data-flip=true] {
+            transform: rotateX(180deg);
+        }
+    }
 
-  &-front,
-  &-back {
-      position: relative;
-      z-index: 1;
-      display: block;
-      backface-visibility: hidden;
-      overflow: hidden;
-  }
+    &-front,
+    &-back {
+        position: relative;
+        z-index: 1;
+        display: block;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
 
-  &-front {
-      z-index: 2;
-      transform: rotateX(0deg);
-  }
+    &-front {
+        z-index: 2;
+        transform: rotateX(0deg);
+    }
 
-  &-back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transform: rotateX(180deg);
+    &-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: rotateX(180deg);
 
-      .chat__card-content {
-          background: #2a1843;
-          color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          height: 100%;
-          padding: 0;
-          border-radius: .5rem;
+        .chat__card-content {
+            background: #2a1843;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            padding: 0;
+            border-radius: .5rem;
 
-          > svg { 
-              vertical-align: sub;
-              margin: 0 .5rem;
-          }
-      }
-  }
+            >svg {
+                vertical-align: sub;
+                margin: 0 .5rem;
+            }
+        }
+    }
 }
