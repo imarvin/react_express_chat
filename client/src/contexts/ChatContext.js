@@ -5,7 +5,8 @@ export const ChatContext = createContext();
 
 const ChatContextProvider = (props) => {
   // by default this app uses backend express server to fetch and post data
-  // this can be changed to false in .env 
+  // this can be changed to false in .env
+  // env variables returns strings so I have to convert it to a proper boolean.
   const isExpress = process.env.REACT_APP_EXPRESS_SERVER === "true" ? true : false;
 
   const [users, setUsers] = useState([]);
