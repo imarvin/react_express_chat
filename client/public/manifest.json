@@ -1,21 +1,16 @@
 {
-  "short_name": "Better Chat",
-  "name": "A React Chat for Better",
+  "short_name": "React Chat",
+  "name": "A React Chat",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "better-favicon-fill.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "better-apple-touch-icon-fill.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "180x180"
     }
   ],
   "start_url": ".",

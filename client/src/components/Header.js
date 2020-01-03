@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from '../logo.svg';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+
 const Header = () => {
     return (
         <header className="chat__header">
             <div className="chat__logo">
-                <img src={logo} className="chat__logo-img" alt="Better logo" />
-                <h1 className="chat__logo-h1">better chat</h1>
+                <AccountTreeIcon className="chat__logo-svg"></AccountTreeIcon>
+                 
             </div>
         </header>
     )
