@@ -6,7 +6,9 @@ const Header = () => {
         <header className="chat__header">
             <div className="chat__logo">
                 <AccountTreeIcon className="chat__logo-svg"></AccountTreeIcon>
-                 
+            </div>
+            <div className="chat__header-status">
+                (client only)
             </div>
         </header>
     )
